@@ -20,7 +20,7 @@ compatible: any Jev client works by swapping the endpoint.
 
 | Path | What |
 |---|---|
-| [`skills/sentinel/`](skills/sentinel/) | Agent skill (Claude Code / pi / opencode / any SKILL.md agent) |
+| [`skill/`](skill/) | Agent skill (Claude Code / pi / opencode / any SKILL.md agent) |
 | [`server/`](server/) | The `/v1/systemone` FastAPI proxy + start script |
 | [`game/`](game/) | LLM+oracle Snake demo: Hamiltonian fill-the-map, 36/36 (video in docs/) |
 | [`docs/`](docs/) | Reference docs + benchmark/case-study notes |
@@ -52,15 +52,21 @@ muse-spark...) to call the API: the three primitives, response contract,
 patterns (route, select, gate, rerank, fan-out), and operations. Install:
 
 ```bash
-cp -r skills/sentinel ~/.claude/skills/sentinel      # Claude Code
-cp -r skills/sentinel ~/.pi/agent/skills/sentinel    # pi
-cp -r skills/sentinel <project>/.opencode/skills/sentinel  # opencode
+cp -r skill ~/.claude/skills/sentinel      # Claude Code
+cp -r skill ~/.pi/agent/skills/sentinel    # pi
+cp -r skill <project>/.opencode/skills/sentinel  # opencode
 ```
+
+> The skill was largely inspired by [TypeSafe's typesafe-ai SKILL.md](https://github.com/typesafe-ai/skills)
+> (MIT) — same philosophy and structure, rewritten for the self-hosted Sentinel API.
 
 Validated end-to-end: an autonomous muse-spark-1.3 opencode session used the
 skill to build a Snake game where Sentinel makes 100% of the moves, and filled
-the entire 36-cell board (see `docs/sentinel-snake-fill.mp4`,
-`docs/case-study.md`, `docs/RESULT-snake.md`).
+the entire 36-cell board (36/36, 263 decisions, untuned seed).
+
+**Watch it: [`docs/sentinel-snake-fill.mp4`](docs/sentinel-snake-fill.mp4)**
+— case study in [`docs/case-study.md`](docs/case-study.md), run report in
+[`docs/RESULT-snake.md`](docs/RESULT-snake.md).
 
 ## License
 
