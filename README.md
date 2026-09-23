@@ -64,9 +64,12 @@ Validated end-to-end: an autonomous muse-spark-1.3 opencode session used the
 skill to build a Snake game where Sentinel makes 100% of the moves, and filled
 the entire 36-cell board (36/36, 263 decisions, untuned seed).
 
-**Watch it: [`docs/sentinel-snake-fill.mp4`](docs/sentinel-snake-fill.mp4)**
-— case study in [`docs/case-study.md`](docs/case-study.md), run report in
-[`docs/RESULT-snake.md`](docs/RESULT-snake.md).
+![Sentinel filling the Snake board 36/36](docs/sentinel-snake-fill.gif)
+
+*Autonomous muse-spark session: Sentinel makes 100% of the moves; the board
+fills 36/36 on an untuned seed. Video: [`docs/sentinel-snake-fill.mp4`](docs/sentinel-snake-fill.mp4),
+case study in [`docs/case-study.md`](docs/case-study.md), run report in
+[`docs/RESULT-snake.md`](docs/RESULT-snake.md).*
 
 ## License
 
